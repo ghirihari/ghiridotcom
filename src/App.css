@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "IAWriter";
+  src: url("./assets/IAWriter.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    .content-row {
+      width: 100%;
+    }
+  }
+  .link {
+    .link-text {
+      flex-grow: 1;
+    }
+    .link-icon {
+      display: block;
+    }
+  }
+}
+
+#root {
+  width: 100%;
+}
+
+.container {
+  padding: 32px 24px;
+}
+.content-row {
+  font-family: "IAWriter";
+  font-size: 16px;
+  line-height: 32px;
+
+  height: 32px;
+  text-transform: uppercase;
+  user-select: none;
+  width: fit-content;
+}
+
+.empty-row {
+  height: 32px;
+}
+
+.link {
+  display: flex;
+  padding: 0px 4px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.link-text {
+  flex-grow: 0;
+}
+.link-icon {
+  display: none;
+}
+
+.link:hover {
+  .link-icon {
+    display: block;
+  }
+}
+
+.link:active {
+  background-color: #fff;
+  color: #242424;
+}
