@@ -94,12 +94,13 @@
 .dotImage {
   white-space: pre;
   padding: 32px 24px;
-  opacity: 0.1;
+  opacity: 0;
   font-size: 17px;
   position: absolute;
   z-index: -1;
+  transition: all 0.5s ease-out;
 }
 
 .show {
-  opacity: 0.75;
+  opacity: 0.1;
 }
