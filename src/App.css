@@ -7,8 +7,18 @@
 
 @media only screen and (max-width: 768px) {
   .container {
+    flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    overflow: hidden;
     .content-row {
       width: 100%;
+    }
+    .text-container {
+      flex-grow: 0;
+    }
+    .dotImage {
+      padding: 0;
     }
   }
   .link {
@@ -26,7 +36,14 @@
 }
 
 .container {
+  display: flex;
+}
+.text-container {
   padding: 32px 24px;
+  flex-grow: 1;
+}
+.text {
+  flex-grow: 1;
 }
 .content-row {
   font-family: "IAWriter";
@@ -55,6 +72,11 @@
 .link-icon {
   display: none;
 }
+.link:hover {
+  .link-icon {
+    display: block;
+  }
+}
 
 .link:hover {
   .link-icon {
@@ -65,4 +87,15 @@
 .link:active {
   background-color: #fff;
   color: #242424;
+}
+
+.dotImage {
+  font-size: 6px;
+  white-space: pre;
+  padding: 32px 24px;
+  opacity: 0.1;
+}
+
+.show {
+  opacity: 0.75;
 }
