@@ -30,6 +30,9 @@
     .link-icon {
       display: block;
     }
+    .link-description {
+      display: none;
+    }
   }
 }
 
@@ -70,6 +73,11 @@
 }
 .link-text {
   flex-grow: 0;
+}
+.link-description {
+  margin-left: 8px;
+  font-size: 12px;
+  color: #555555;
 }
 .link-icon {
   display: none;

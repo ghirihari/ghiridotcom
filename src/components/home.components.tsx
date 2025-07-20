@@ -2,14 +2,22 @@ import { image } from "./dot";
 
 type LinkRowProps = {
   text: string;
+  description?: string;
   link?: string;
 };
 
-export const LinkRow: React.FC<LinkRowProps> = ({ text, link = null }) => {
+export const LinkRow: React.FC<LinkRowProps> = ({
+  text,
+  description,
+  link = null,
+}) => {
   const navigate = (url: string) => window.open(url, "_blank");
   return (
     <div className="content-row link" onClick={() => link && navigate(link)}>
       <label className="link-text">{text}</label>
+      {description && (
+        <label className="link-description">({description})</label>
+      )}
       <label className="link-icon">&nbsp;[{link ? "↗" : "-"}]</label>
     </div>
   );
